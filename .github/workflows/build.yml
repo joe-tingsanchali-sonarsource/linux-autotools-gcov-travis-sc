@@ -48,4 +48,9 @@ jobs:
             --define sonar.cfamily.compile-commands="${{ env.BUILD_WRAPPER_OUT_DIR }}/compile_commands.json"
             --define sonar.cfamily.gcov.reportsPath="coverage-dir"
             -Dsonar.verbose=true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-autotools-gcov-coverage-dir
+          path: coverage-dir
+
             -Dsonar.scanner.skipJreProvisioning=true
