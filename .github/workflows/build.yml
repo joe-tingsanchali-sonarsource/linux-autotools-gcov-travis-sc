@@ -34,7 +34,8 @@ jobs:
           cd coverage-dir
           # --preserve-paths helps us avoid name clash for `.gcov` files corresponding to source
           # files with the same name but in different directories.
-          find .. -name '*.o' | xargs gcov --preserve-paths
+          # find .. -name '*.o' | xargs gcov --preserve-paths
+          find .. -name '*.o' | xargs gcov
           cd ..
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
