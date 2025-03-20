@@ -47,3 +47,5 @@ jobs:
           args: >
             --define sonar.cfamily.compile-commands="${{ env.BUILD_WRAPPER_OUT_DIR }}/compile_commands.json"
             --define sonar.cfamily.gcov.reportsPath="coverage-dir"
+            --define sonar.projectKey=joe-tingsanchali-sonarsource_linux-autotools-gcov-travis-sc_92844d6e-15f2-40e1-953b-973e1b8823d8
+
